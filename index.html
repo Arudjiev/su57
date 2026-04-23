@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<!-- saved from url=(0291)https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974 -->
+<html lang="ru" data-palette="blue" data-heading="bebas" data-hero="video" data-density="compact" data-lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style data-omelette-injected="">html,body{background:transparent}</style><script data-omelette-injected="">(()=>{var $=["https://claude.ai","https://preview.claude.ai","https://eap-omelette.claude.ai"];var F=30000;var A=3000;document.addEventListener("DOMContentLoaded",()=>{const Q="transform-react-jsx-source";document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((J,V)=>{const X=J.getAttribute("data-plugins")||"";if(X.indexOf(Q)<0){J.setAttribute("data-plugins",X?`${X},${Q}`:Q)}if(!J.hasAttribute("data-filename")){J.setAttribute("data-filename",J.getAttribute("src")||`inline-${V}`)}})});var W=window.parent;if(W&&W!==window){const Q=(z,k)=>{try{W.postMessage({__omelette_log:true,type:z,data:k},"*")}catch{}};["log","warn","error"].forEach((z)=>{const k=console[z];console[z]=(...C)=>{const D=C.map((w)=>{try{return typeof w==="object"?JSON.stringify(w):String(w)}catch{try{return String(w)}catch{return"[unstringifiable]"}}}).join(" ");Q(z,D);k.apply(console,C)}});window.addEventListener("error",(z)=>{const k=z.target;if(k&&k!==window&&k.tagName){const C=k.src||k.href||"";Q("resource_error",`${k.tagName} failed to load: ${C}`)}else{Q("error",`${z.message||"Unknown error"} at ${z.filename||"?"}:${z.lineno||0}:${z.colno||0}`)}},true);window.addEventListener("unhandledrejection",(z)=>{const k=z.reason;const C=k instanceof Error?`${k.message} ${k.stack}`:String(k);Q("error",`Unhandled rejection: ${C}`)});const J=()=>{try{W.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")J();else window.addEventListener("load",J);if(window.ResizeObserver)new ResizeObserver(J).observe(document.documentElement);const V={};let X=0;window.claude={complete(z){return new Promise((k,C)=>{if(!$.length){C(new Error("claude.complete: no parent origin"));return}const D=`c${++X}`;const w=()=>setTimeout(()=>{delete V[D];C(new Error(`claude.complete: no data for ${F/1000}s`))},F);const K=w();V[D]={resolve:k,reject:C,text:"",t:K,arm:w};try{for(const Z of $){W.postMessage({__om_api:true,id:D,body:z},Z)}}catch(Z){clearTimeout(K);delete V[D];C(Z)}})}};const Y={};let h=0;window.omelette={writeFile:(z,k)=>new Promise((C,D)=>{if(!$.length){C();return}const w=`f${++h}`;const K=setTimeout(()=>{delete Y[w];C()},A);Y[w]={resolve:C,reject:D,t:K};try{for(const Z of $){W.postMessage({__om_file:true,id:w,op:"write",path:z,content:k},Z)}}catch{clearTimeout(K);delete Y[w];C()}})};const b=(z)=>{try{return JSON.stringify(z)}catch{return JSON.stringify(String(z))}};window.addEventListener("message",(z)=>{if($.indexOf(z.origin)<0)return;if(z.source!==W)return;const k=z.data;if(!k)return;if(k.__om_file_r){const w=Y[k.id];if(!w)return;clearTimeout(w.t);delete Y[k.id];if(k.ok)w.resolve();else w.reject(new Error(k.error||"write failed"));return}if(k.__om_api_r){const w=V[k.id];if(!w)return;if(k.error!=null){clearTimeout(w.t);delete V[k.id];w.reject(new Error(k.error));return}if(k.chunk!=null){clearTimeout(w.t);w.t=w.arm();w.text+=k.chunk;return}if(k.done){clearTimeout(w.t);delete V[k.id];w.resolve(k.text!=null?k.text:w.text);return}return}if(!k.__om_eval)return;const C=k;const D=(w)=>{z.source.postMessage({...w,__om_eval_r:1,id:C.id},z.origin)};try{const w=(0,eval)(C.code);if(w&&typeof w.then==="function"){w.then((K)=>D({ok:1,v:b(K)}),(K)=>D({ok:0,e:String(K)}))}else{D({ok:1,v:b(w)})}}catch(w){D({ok:0,e:String(w)})}})}})();
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Су-57 / Felon — бортовой досье</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link id="font-link" rel="stylesheet" href="./files/css2">
+
+<script>
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "palette": "blue",
+  "headingFont": "bebas",
+  "hero": "video",
+  "lang": "en",
+  "density": "compact"
+}/*EDITMODE-END*/;
+</script>
+
+<style>
+  :root {
+    --bg: #07090c;
+    --bg-2: #0c1117;
+    --bg-3: #11181f;
+    --fg: #e7edf3;
+    --fg-dim: #8a96a3;
+    --fg-faint: #4b5663;
+    --rule: #1a2430;
+    --rule-strong: #2a3848;
+    --accent: #2c6fd1;           /* кобальт */
+    --accent-hot: #4a8ce6;
+    --accent-deep: #0a2a5c;
+    --warn: #c9a227;
+    --danger: #c8321e;
+
+    --h-font: "Oswald", "Inter", system-ui, sans-serif;
+    --b-font: "Inter", system-ui, sans-serif;
+    --m-font: "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+    --pad-y: 140px;
+    --pad-x: 64px;
+    --gap: 32px;
+    --rad: 2px;
+  }
+
+  html[data-palette="red"] {
+    --accent: #c8321e;
+    --accent-hot: #e8573e;
+    --accent-deep: #55120a;
+  }
+  html[data-palette="blueprint"] {
+    --bg: #0a1a2e;
+    --bg-2: #0d2240;
+    --bg-3: #10294d;
+    --rule: #1d3a66;
+    --rule-strong: #2b558f;
+    --accent: #8bb8ff;
+    --accent-hot: #cfe0ff;
+    --accent-deep: #23487f;
+    --fg: #e6efff;
+    --fg-dim: #9fb4d3;
+    --fg-faint: #4a6590;
+  }
+
+  html[data-heading="rubik"]   { --h-font: "Rubik", system-ui, sans-serif; }
+  html[data-heading="bebas"]   { --h-font: "Bebas Neue", system-ui, sans-serif; }
+
+  html[data-density="compact"]    { --pad-y: 90px; --pad-x: 48px; --gap: 22px; }
+  html[data-density="spacious"]   { --pad-y: 180px; --pad-x: 80px; --gap: 44px; }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
+  body {
+    font-family: var(--b-font);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+
+  /* ---- Общие блоки ---- */
+  .wrap { padding: var(--pad-y) var(--pad-x); position: relative; }
+  .rule { height: 1px; background: var(--rule); width: 100%; }
+  .rule-strong { height: 1px; background: var(--rule-strong); }
+
+  .sec-head {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 32px;
+    align-items: end;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--rule-strong);
+    margin-bottom: 56px;
+  }
+  .sec-num {
+    font-family: var(--m-font);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+  }
+  .sec-title {
+    font-family: var(--h-font);
+    font-weight: 600;
+    font-size: clamp(44px, 6vw, 88px);
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .sec-sub {
+    font-family: var(--m-font);
+    font-size: 11px;
+    color: var(--fg-faint);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: right;
+    max-width: 260px;
+  }
+
+  .mono { font-family: var(--m-font); letter-spacing: 0.08em; }
+  .up { text-transform: uppercase; letter-spacing: 0.12em; }
+  .muted { color: var(--fg-dim); }
+  .faint { color: var(--fg-faint); }
+
+  /* ---- Координатные уголки ---- */
+  .corners { position: relative; }
+  .corners::before, .corners::after,
+  .corners > .c-tl, .corners > .c-tr, .corners > .c-bl, .corners > .c-br { content: ""; position: absolute; width: 14px; height: 14px; border: 1px solid var(--accent); }
+  .corners > .c-tl { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .corners > .c-tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
+  .corners > .c-bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
+  .corners > .c-br { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+  .corners::before, .corners::after { display: none; }
+
+  /* ========== NAV ========== */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 32px;
+    background: linear-gradient(180deg, rgba(7,9,12,0.9), rgba(7,9,12,0));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--h-font); font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; font-size: 15px;
+  }
+  .nav-brand svg { display: block; }
+  .nav-brand .tag { font-family: var(--m-font); font-size: 10px; color: var(--accent); letter-spacing: 0.2em; border: 1px solid var(--accent); padding: 3px 6px; }
+  .nav-links { display: flex; gap: 26px; font-family: var(--m-font); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-dim); }
+  .nav-links a { text-decoration: none; transition: color .15s; }
+  .nav-links a:hover { color: var(--accent-hot); }
+  .nav-links a .idx { color: var(--fg-faint); margin-right: 6px; }
+  .nav-right { font-family: var(--m-font); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.18em; }
+  .nav-right .dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 6px; animation: blink 2s infinite; vertical-align: middle; }
+  @keyframes blink { 50% { opacity: 0.3; } }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow: hidden;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .hero-media {
+    position: absolute; inset: 0;
+    background: #000;
+    overflow: hidden;
+  }
+  /* Видео плейсхолдер */
+  .video-placeholder {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 60%, rgba(44,111,209,0.18), transparent 60%),
+      radial-gradient(ellipse at 70% 40%, rgba(44,111,209,0.10), transparent 60%),
+      linear-gradient(180deg, #05080c 0%, #0b1420 45%, #07090c 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .video-placeholder::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .video-placeholder::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    top: 62%;
+    background: linear-gradient(90deg, transparent, var(--accent) 50%, transparent);
+    opacity: 0.6;
+    filter: blur(2px);
+  }
+  .vp-silhouette {
+    position: absolute;
+    width: min(72vw, 1100px);
+    opacity: 0.35;
+    filter: drop-shadow(0 0 30px rgba(44,111,209,0.3));
+  }
+  .vp-label {
+    position: absolute;
+    bottom: 26px; right: 32px;
+    font-family: var(--m-font);
+    font-size: 10px;
+    color: var(--fg-faint);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid var(--rule-strong);
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.4);
+  }
+  .vp-label b { color: var(--accent); font-weight: 500; }
+
+  .hero-scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(7,9,12,0.35) 0%, rgba(7,9,12,0.15) 40%, rgba(7,9,12,0.85) 100%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    padding: 140px 64px 64px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: end;
+    min-height: 100vh;
+  }
+  .hero-title {
+    font-family: var(--h-font);
+    font-weight: 600;
+    font-size: clamp(80px, 14vw, 220px);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 0;
+    mix-blend-mode: normal;
+  }
+  .hero-title .small {
+    display: block;
+    font-size: clamp(20px, 2vw, 28px);
+    letter-spacing: 0.35em;
+    font-weight: 400;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-family: var(--m-font);
+  }
+  .hero-title .felon {
+    display: block;
+    color: var(--fg-faint);
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 100px);
+    margin-top: 8px;
+  }
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, auto));
+    gap: 36px;
+    font-family: var(--m-font);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    padding-bottom: 6px;
+  }
+  .hero-meta .k { color: var(--fg-faint); display: block; margin-bottom: 6px; font-size: 10px; }
+  .hero-meta .v { color: var(--fg); font-size: 13px; letter-spacing: 0.08em; }
+  .hero-meta .v b { color: var(--accent); font-weight: 500; }
+
+  .hero-stats {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--rule-strong);
+    background: rgba(7,9,12,0.9);
+  }
+  .hero-stat {
+    padding: 28px 32px;
+    border-right: 1px solid var(--rule);
+  }
+  .hero-stat:last-child { border-right: 0; }
+  .hero-stat .k { font-family: var(--m-font); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.2em; text-transform: uppercase; }
+  .hero-stat .v { font-family: var(--h-font); font-weight: 500; font-size: 40px; margin-top: 10px; line-height: 1; }
+  .hero-stat .v sup { font-size: 15px; color: var(--accent); font-family: var(--m-font); font-weight: 400; vertical-align: top; margin-left: 4px; }
+  .hero-stat .u { font-family: var(--m-font); font-size: 11px; color: var(--fg-dim); margin-top: 6px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+  /* Hero variants */
+  html[data-hero="static"] .video-placeholder::after { display: none; }
+  html[data-hero="type"] .hero-media { opacity: 0.2; }
+  html[data-hero="type"] .hero-title { font-size: clamp(90px, 18vw, 280px); }
+  html[data-hero="blueprint"] .video-placeholder {
+    background:
+      linear-gradient(180deg, #051021 0%, #0a1a30 100%);
+  }
+  html[data-hero="blueprint"] .video-placeholder::before { opacity: 1.5; background-size: 40px 40px; }
+  html[data-hero="blueprint"] .vp-silhouette { opacity: 0.7; filter: drop-shadow(0 0 30px rgba(139,184,255,0.5)); }
+
+  /* ========== SECTIONS ========== */
+
+  /* OVERVIEW */
+  #overview { background: var(--bg); }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+  }
+  .lede {
+    font-family: var(--h-font);
+    font-weight: 300;
+    font-size: clamp(24px, 2.2vw, 34px);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    color: var(--fg);
+    text-wrap: pretty;
+  }
+  .lede b { color: var(--accent); font-weight: 500; }
+  .lede-body { font-size: 15.5px; color: var(--fg-dim); line-height: 1.65; margin-top: 32px; max-width: 58ch; }
+  .lede-body p { margin: 0 0 16px; }
+
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .fact {
+    background: var(--bg-2);
+    padding: 26px 24px;
+  }
+  .fact .k { font-family: var(--m-font); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
+  .fact .v { font-family: var(--h-font); font-weight: 500; font-size: 28px; line-height: 1.1; }
+  .fact .v em { color: var(--accent); font-style: normal; }
+  .fact .d { font-size: 12px; color: var(--fg-dim); margin-top: 6px; font-family: var(--m-font); letter-spacing: 0.04em; }
+
+  /* HISTORY TIMELINE */
+  #history { background: var(--bg-2); }
+  .timeline {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .timeline-track {
+    position: sticky;
+    top: 120px;
+    font-family: var(--m-font);
+    font-size: 11px;
+    color: var(--fg-faint);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .timeline-track .label { color: var(--accent); margin-bottom: 12px; }
+  .timeline-track .years {
+    font-family: var(--h-font); font-size: 46px; color: var(--fg); letter-spacing: 0; line-height: 1;
+  }
+  .tl-items { display: flex; flex-direction: column; gap: 1px; background: var(--rule); }
+  .tl-item {
+    background: var(--bg);
+    padding: 32px 32px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 36px;
+    align-items: start;
+    transition: background .2s, transform .2s;
+    border-left: 2px solid transparent;
+  }
+  .tl-item:hover { background: var(--bg-3); border-left-color: var(--accent); transform: translateX(2px); }
+  .tl-year { font-family: var(--h-font); font-size: 40px; font-weight: 500; color: var(--accent); letter-spacing: -0.01em; line-height: 1; }
+  .tl-body h4 { margin: 0 0 8px; font-family: var(--h-font); font-weight: 500; text-transform: uppercase; font-size: 20px; letter-spacing: 0.02em; }
+  .tl-body p { margin: 0; color: var(--fg-dim); font-size: 14.5px; line-height: 1.6; max-width: 62ch; }
+  .tl-tag { display: inline-block; font-family: var(--m-font); font-size: 10px; color: var(--accent); border: 1px solid var(--accent-deep); padding: 3px 8px; margin-top: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+  /* SPECS + ARMAMENT */
+  #specs { background: var(--bg); }
+  .specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .specs-list { display: flex; flex-direction: column; }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+    transition: background .15s, padding .15s;
+  }
+  .spec-row:hover { background: rgba(44,111,209,0.05); padding-left: 12px; padding-right: 12px; }
+  .spec-k { font-family: var(--m-font); font-size: 11px; color: var(--fg-dim); letter-spacing: 0.12em; text-transform: uppercase; }
+  .spec-v { font-family: var(--h-font); font-size: 22px; font-weight: 500; }
+  .spec-v .u { color: var(--fg-faint); font-size: 13px; font-family: var(--m-font); font-weight: 400; margin-left: 6px; letter-spacing: 0.05em; }
+
+  /* Схема самолёта */
+  .diagram {
+    position: sticky; top: 120px;
+    background: var(--bg-2);
+    border: 1px solid var(--rule-strong);
+    padding: 32px;
+    min-height: 500px;
+    display: flex; flex-direction: column;
+    gap: 20px;
+  }
+  .diagram-head {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--m-font); font-size: 10px; letter-spacing: 0.18em;
+    color: var(--fg-faint); text-transform: uppercase;
+  }
+  .diagram-head b { color: var(--accent); font-weight: 500; }
+  .diagram-svg { width: 100%; height: auto; flex: 1; }
+  .diagram-hardpoints {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule);
+    font-family: var(--m-font); font-size: 10px;
+  }
+  .hp { background: var(--bg); padding: 10px 8px; text-align: center; color: var(--fg-dim); letter-spacing: 0.08em; text-transform: uppercase; transition: background .15s, color .15s; cursor: default; }
+  .hp:hover { background: var(--accent-deep); color: var(--fg); }
+  .hp .n { display: block; color: var(--accent); font-weight: 600; margin-bottom: 2px; }
+
+  /* ARMAMENT list */
+  .arm-section { margin-top: 96px; }
+  .arm-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 18px; margin-bottom: 36px;
+  }
+  .arm-head h3 {
+    margin: 0; font-family: var(--h-font); font-weight: 500;
+    text-transform: uppercase; font-size: 32px; letter-spacing: 0.01em;
+  }
+  .arm-head .caption { font-family: var(--m-font); font-size: 11px; color: var(--fg-faint); letter-spacing: 0.15em; text-transform: uppercase; }
+
+  .arm-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .arm-card {
+    background: var(--bg-2);
+    padding: 26px 22px 22px;
+    display: flex; flex-direction: column;
+    gap: 14px;
+    min-height: 220px;
+    transition: background .2s, transform .2s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .arm-card:hover { background: var(--bg-3); transform: translateY(-2px); }
+  .arm-card:hover .arm-num { color: var(--accent-hot); }
+  .arm-card::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--accent); transform: scaleX(0); transform-origin: left;
+    transition: transform .3s;
+  }
+  .arm-card:hover::before { transform: scaleX(1); }
+  .arm-num { font-family: var(--m-font); font-size: 11px; color: var(--fg-faint); letter-spacing: 0.18em; transition: color .2s; }
+  .arm-name { font-family: var(--h-font); font-weight: 500; font-size: 22px; text-transform: uppercase; line-height: 1.1; }
+  .arm-type { font-family: var(--m-font); font-size: 10px; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; }
+  .arm-desc { font-size: 13px; color: var(--fg-dim); line-height: 1.55; margin-top: auto; }
+
+  /* COMBAT USE */
+  #combat { background: var(--bg-2); }
+  .combat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .combat-card {
+    background: var(--bg);
+    padding: 36px 32px;
+    display: flex; flex-direction: column; gap: 18px;
+    min-height: 320px;
+    transition: background .2s;
+    cursor: default;
+  }
+  .combat-card:hover { background: var(--bg-3); }
+  .combat-card .img-ph {
+    height: 180px;
+    background:
+      repeating-linear-gradient(45deg, rgba(44,111,209,0.06) 0 2px, transparent 2px 12px),
+      var(--bg-2);
+    border: 1px solid var(--rule-strong);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--m-font); font-size: 10px; color: var(--fg-faint);
+    letter-spacing: 0.15em; text-transform: uppercase; text-align: center;
+    padding: 8px;
+  }
+  .combat-card h4 { margin: 0; font-family: var(--h-font); font-weight: 500; text-transform: uppercase; font-size: 24px; letter-spacing: 0.01em; }
+  .combat-card .when { font-family: var(--m-font); font-size: 11px; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; }
+  .combat-card p { margin: 0; font-size: 14px; color: var(--fg-dim); line-height: 1.6; }
+
+  /* COMPARE */
+  #compare { background: var(--bg); }
+  .cmp-intro { max-width: 70ch; color: var(--fg-dim); font-size: 15.5px; line-height: 1.65; margin-bottom: 56px; }
+  .cmp-table {
+    display: grid;
+    grid-template-columns: 220px repeat(4, 1fr);
+    font-family: var(--m-font);
+    font-size: 13px;
+    border-top: 1px solid var(--rule-strong);
+  }
+  .cmp-cell {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    display: flex; align-items: center;
+  }
+  .cmp-cell:last-child { border-right: 0; }
+  .cmp-head {
+    font-family: var(--h-font); font-size: 17px; font-weight: 500; text-transform: uppercase;
+    padding: 18px 20px; border-bottom: 1px solid var(--rule-strong);
+    border-right: 1px solid var(--rule); background: var(--bg-2);
+    letter-spacing: 0.02em;
+  }
+  .cmp-head.accent { color: var(--accent); border-bottom-color: var(--accent); }
+  .cmp-head .sub { display: block; font-family: var(--m-font); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.15em; margin-top: 4px; font-weight: 400; }
+  .cmp-head.accent .sub { color: var(--accent-hot); }
+  .cmp-row-h {
+    font-family: var(--m-font); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.18em; text-transform: uppercase;
+    border-right: 1px solid var(--rule-strong);
+    background: var(--bg-2);
+  }
+  .cmp-bar-wrap { display: flex; flex-direction: column; gap: 6px; width: 100%; }
+  .cmp-bar-val { color: var(--fg); font-size: 14px; }
+  .cmp-bar-val.accent { color: var(--accent); }
+  .cmp-bar { height: 4px; background: var(--rule); position: relative; overflow: hidden; }
+  .cmp-bar > span { display: block; height: 100%; background: var(--fg-faint); }
+  .cmp-bar.accent > span { background: var(--accent); }
+
+  /* GALLERY */
+  #gallery { background: var(--bg); }
+  .gal-sub {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 14px; margin: 56px 0 24px;
+  }
+  .gal-sub:first-of-type { margin-top: 0; }
+  .gal-sub h3 {
+    margin: 0; font-family: var(--h-font); font-weight: 500;
+    text-transform: uppercase; font-size: 28px; letter-spacing: 0.01em;
+  }
+  .gal-sub .caption { font-family: var(--m-font); font-size: 11px; color: var(--fg-faint); letter-spacing: 0.15em; text-transform: uppercase; }
+  .gal-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 120px;
+    gap: 16px;
+  }
+  /* Vertical wallpapers grid */
+  .gal-vgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .gal-vcell {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    border: 1px solid var(--rule-strong);
+    background:
+      repeating-linear-gradient(135deg, rgba(44,111,209,0.05) 0 3px, transparent 3px 16px),
+      var(--bg-2);
+    overflow: hidden;
+    transition: border-color .2s, transform .2s;
+  }
+  .gal-vcell:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .gal-vcell img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .gal-vcell .slot-note {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-family: var(--m-font); font-size: 10px; color: var(--fg-faint);
+    letter-spacing: 0.2em; text-transform: uppercase; padding: 16px;
+  }
+  .gal-cell {
+    position: relative;
+    border: 1px solid var(--rule-strong);
+    background:
+      repeating-linear-gradient(135deg, rgba(44,111,209,0.05) 0 3px, transparent 3px 16px),
+      var(--bg-2);
+    overflow: hidden;
+    transition: border-color .2s, transform .2s;
+    cursor: default;
+  }
+  .gal-cell:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .gal-cell .ph-label {
+    position: absolute; left: 12px; bottom: 12px;
+    font-family: var(--m-font); font-size: 10px; color: var(--fg-dim);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    background: rgba(7,9,12,0.7); padding: 6px 10px; border-left: 2px solid var(--accent);
+  }
+  .gal-cell .ph-num {
+    position: absolute; top: 12px; right: 12px;
+    font-family: var(--m-font); font-size: 10px; color: var(--fg-faint);
+    letter-spacing: 0.15em;
+  }
+  .g-a { grid-column: span 6; grid-row: span 3; }
+  .g-b { grid-column: span 6; grid-row: span 3; }
+  .g-c { grid-column: span 4; grid-row: span 2; }
+  .g-d { grid-column: span 4; grid-row: span 2; }
+  .g-e { grid-column: span 4; grid-row: span 2; }
+  .g-f { grid-column: span 8; grid-row: span 2; }
+  .g-g { grid-column: span 4; grid-row: span 2; }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg-2);
+    border-top: 1px solid var(--rule-strong);
+    padding: 80px var(--pad-x) 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  footer .brand { font-family: var(--h-font); font-weight: 600; font-size: 40px; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1; }
+  footer .brand .sub { display: block; font-family: var(--m-font); font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-top: 8px; font-weight: 400; }
+  footer .disclaimer { font-family: var(--m-font); font-size: 11px; color: var(--fg-faint); letter-spacing: 0.05em; line-height: 1.7; margin-top: 24px; max-width: 50ch; }
+  footer h5 { font-family: var(--m-font); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 16px; }
+  footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-family: var(--m-font); font-size: 12px; color: var(--fg-dim); letter-spacing: 0.08em; }
+  footer ul li::before { content: "— "; color: var(--fg-faint); }
+  footer .baseline { grid-column: 1 / -1; border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 40px; display: flex; justify-content: space-between; font-family: var(--m-font); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.18em; text-transform: uppercase; }
+
+  /* TWEAKS PANEL */
+  #tweaks-panel {
+    position: fixed;
+    right: 20px; bottom: 20px;
+    width: 280px;
+    background: var(--bg-2);
+    border: 1px solid var(--rule-strong);
+    padding: 18px;
+    z-index: 100;
+    font-family: var(--m-font);
+    font-size: 11px;
+    color: var(--fg-dim);
+    display: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+  #tweaks-panel.on { display: block; }
+  #tweaks-panel h4 { margin: 0 0 14px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); display: flex; justify-content: space-between; }
+  #tweaks-panel .row { margin-bottom: 14px; }
+  #tweaks-panel .lab { font-size: 10px; color: var(--fg-faint); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; }
+  #tweaks-panel .opts { display: flex; gap: 4px; flex-wrap: wrap; }
+  #tweaks-panel .opts button {
+    background: var(--bg); color: var(--fg-dim);
+    border: 1px solid var(--rule-strong);
+    padding: 6px 10px; font-family: var(--m-font); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+    transition: all .15s;
+  }
+  #tweaks-panel .opts button:hover { color: var(--fg); border-color: var(--accent); }
+  #tweaks-panel .opts button.on { background: var(--accent-deep); color: var(--fg); border-color: var(--accent); }
+
+  /* Hide EN by default unless lang=en */
+  .t-en { display: none; }
+  html[data-lang="en"] .t-ru { display: none; }
+  html[data-lang="en"] .t-en { display: inline; }
+  html[data-lang="en"] body { font-family: var(--b-font); }
+
+  /* Compact responsive safety */
+  @media (max-width: 900px) {
+    :root { --pad-x: 24px; --pad-y: 80px; }
+    .sec-head { grid-template-columns: 1fr; }
+    .sec-sub { text-align: left; }
+    .hero-content { padding: 120px 24px 40px; grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .hero-meta { grid-template-columns: 1fr 1fr; }
+    .overview-grid, .specs-grid, .timeline { grid-template-columns: 1fr; }
+    .arm-grid { grid-template-columns: 1fr 1fr; }
+    .combat-grid { grid-template-columns: 1fr; }
+    .cmp-table { grid-template-columns: 140px repeat(4, 1fr); font-size: 11px; }
+    .gal-grid { grid-template-columns: repeat(4, 1fr); }
+    .g-a, .g-b, .g-c, .g-d, .g-e, .g-f, .g-g { grid-column: span 4; grid-row: span 2; }
+    .diagram { position: static; }
+    footer { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">
+    <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+      <path d="M1 10 L14 1 L27 10 L14 19 Z" stroke="currentColor" stroke-width="1.3"></path>
+      <path d="M14 1 L14 19" stroke="currentColor" stroke-width="0.7" opacity="0.5"></path>
+    </svg>
+    Су-57
+    <span class="tag">FELON</span>
+  </div>
+  <div class="nav-links">
+    <a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#overview"><span class="idx">01</span>Обзор</a>
+    <a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#history"><span class="idx">02</span>История</a>
+    <a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#specs"><span class="idx">03</span>ТТХ</a>
+    <a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#combat"><span class="idx">04</span>Применение</a>
+    <a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#compare"><span class="idx">05</span>Сравнение</a>
+    <a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#gallery"><span class="idx">06</span>Галерея</a>
+  </div>
+  <div class="nav-right"><span class="dot"></span>БОРТ-ДОСЬЕ / RU</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="pexels-shrinidhi-holla-30751181.jpg" alt="Су-57" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+  </div>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-content">
+    <div>
+      <div class="hero-meta">
+        <div><span class="k">Индекс</span><span class="v"><b>Т-50</b> / ПАК ФА</span></div>
+        <div><span class="k">Код НАТО</span><span class="v">FELON</span></div>
+        <div><span class="k">Поколение</span><span class="v">5-е</span></div>
+      </div>
+      <h1 class="hero-title">
+        <span class="small">ИСТРЕБИТЕЛЬ ПЯТОГО ПОКОЛЕНИЯ</span>
+        Су-57
+        <span class="felon">Felon</span>
+      </h1>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="k">Макс. скорость</div>
+      <div class="v">2 600<sup>км/ч</sup></div>
+      <div class="u">≈ M 2.0 на большой высоте</div>
+    </div>
+    <div class="hero-stat">
+      <div class="k">Боевой радиус</div>
+      <div class="v">1 500<sup>км</sup></div>
+      <div class="u">без подвесных баков</div>
+    </div>
+    <div class="hero-stat">
+      <div class="k">Экипаж</div>
+      <div class="v">1<sup>ч</sup></div>
+      <div class="u">одноместный</div>
+    </div>
+    <div class="hero-stat">
+      <div class="k">Первый полёт</div>
+      <div class="v">2010</div>
+      <div class="u">29 января, Комс.-на-Амуре</div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 OVERVIEW -->
+<section class="wrap" id="overview">
+  <div class="sec-head">
+    <div class="sec-num">// 01 / OVERVIEW</div>
+    <h2 class="sec-title">Обзор</h2>
+    <div class="sec-sub">Многофункциональный истребитель завоевания превосходства в воздухе</div>
+  </div>
+
+  <div class="overview-grid">
+    <div>
+      <p class="lede">
+        Су-57 — российский <b>многофункциональный истребитель пятого поколения</b>, созданный ОКБ Сухого в рамках программы ПАК ФА. Совмещает малозаметность, сверхманёвренность и сверхзвуковую крейсерскую скорость, способен поражать цели в воздухе, на земле и на море.
+      </p>
+      <div class="lede-body">
+        <p>Разработка началась в начале 2000-х как ответ на американские F-22 Raptor и F-35 Lightning II. Первый лётный образец Т-50-1 поднялся в воздух <b>29 января 2010 года</b> с аэродрома КнААЗ в Комсомольске-на-Амуре.</p>
+        <p>В отличие от классических «чистых» стелс-платформ, Су-57 делает ставку на комбинацию сниженной заметности, развитой бортовой электроники (АФАР Н036 «Белка») и манёвренных характеристик, унаследованных от линии Су-27/Су-35.</p>
+      </div>
+    </div>
+
+    <div class="facts corners">
+      <span class="c-tl"></span><span class="c-tr"></span><span class="c-bl"></span><span class="c-br"></span>
+      <div class="fact">
+        <div class="k">ОКБ</div>
+        <div class="v">Сухого</div>
+        <div class="d">Москва / КнААЗ</div>
+      </div>
+      <div class="fact">
+        <div class="k">Статус</div>
+        <div class="v"><em>В серии</em></div>
+        <div class="d">с 2020 г.</div>
+      </div>
+      <div class="fact">
+        <div class="k">Производство</div>
+        <div class="v">КнААЗ</div>
+        <div class="d">Комсомольск-на-Амуре</div>
+      </div>
+      <div class="fact">
+        <div class="k">Заказчик</div>
+        <div class="v">ВКС РФ</div>
+        <div class="d">поставки с 2020 г.</div>
+      </div>
+      <div class="fact">
+        <div class="k">Двигатель I</div>
+        <div class="v">АЛ-41Ф1</div>
+        <div class="d">этап 1 / «изделие 117»</div>
+      </div>
+      <div class="fact">
+        <div class="k">Двигатель II</div>
+        <div class="v"><em>«Изд. 30»</em></div>
+        <div class="d">этап 2 / на испытаниях</div>
+      </div>
+      <div class="fact">
+        <div class="k">Радар</div>
+        <div class="v">Н036 Белка</div>
+        <div class="d">АФАР, 5 антенн</div>
+      </div>
+      <div class="fact">
+        <div class="k">ЭПР</div>
+        <div class="v">&lt; 0.5 м²</div>
+        <div class="d">оценочно, лобовая</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 HISTORY -->
+<section class="wrap" id="history">
+  <div class="sec-head">
+    <div class="sec-num">// 02 / TIMELINE</div>
+    <h2 class="sec-title">История<br>разработки</h2>
+    <div class="sec-sub">От программы ПАК ФА до серийного Су-57</div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-track">
+      <div class="label">// ПАК ФА → Су-57</div>
+      <div class="years">2002 — 2025</div>
+      <div style="margin-top: 12px; color: var(--fg-dim);">Более 20 лет НИОКР,<br>9 лётных прототипов,<br>серия с 2019 г.</div>
+    </div>
+
+    <div class="tl-items">
+      <div class="tl-item">
+        <div class="tl-year">2002</div>
+        <div class="tl-body">
+          <h4>Победа в тендере ПАК ФА</h4>
+          <p>ОКБ Сухого выигрывает государственный конкурс на разработку перспективного авиационного комплекса фронтовой авиации. Главный конкурент — РСК «МиГ» с проектом МиГ-1.44 — отстранён.</p>
+          <span class="tl-tag">Программа запущена</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2010</div>
+        <div class="tl-body">
+          <h4>Первый полёт Т-50-1</h4>
+          <p>29 января с аэродрома КнААЗ в Комсомольске-на-Амуре первый лётный образец поднимается в воздух под управлением лётчика-испытателя Сергея Богдана. Полёт продолжался 47 минут.</p>
+          <span class="tl-tag">47 минут</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2011</div>
+        <div class="tl-body">
+          <h4>МАКС-2011 — публичный дебют</h4>
+          <p>Т-50 впервые демонстрируется широкой публике на авиасалоне в Жуковском. Показаны элементы сверхманёвренности на малых скоростях.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2017</div>
+        <div class="tl-body">
+          <h4>Официальное обозначение «Су-57»</h4>
+          <p>На авиасалоне МАКС-2017 машина получает серийный индекс Су-57. На Западе закрепляется код НАТО <i>Felon</i>.</p>
+          <span class="tl-tag">Су-57 / Felon</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2018</div>
+        <div class="tl-body">
+          <h4>Кратковременное развёртывание в Сирии</h4>
+          <p>Пара Су-57 кратковременно перебазируется на авиабазу Хмеймим для испытаний в реальных условиях. По официальным данным — испытания БРЭО и комплексов РЭБ.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2019</div>
+        <div class="tl-body">
+          <h4>Катастрофа серийного образца</h4>
+          <p>24 декабря первый серийный Су-57 терпит крушение при заводских испытаниях в Хабаровском крае. Лётчик катапультируется, машина разбивается.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2020</div>
+        <div class="tl-body">
+          <h4>Первая серийная поставка в ВКС</h4>
+          <p>25 декабря первый серийный Су-57 передан ВКС России. Начало плановых поставок в строевые части.</p>
+          <span class="tl-tag">В строю</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2022</div>
+        <div class="tl-body">
+          <h4>Заявленное боевое применение</h4>
+          <p>Сообщается о применении Су-57 в ходе специальной военной операции с пусками ракет большой дальности вне зоны действия ПВО противника.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-body">
+          <h4>Экспортный дебют Су-57Э</h4>
+          <p>На авиасалоне Airshow China 2024 в Чжухае впервые за рубежом публично демонстрируется экспортная версия Су-57Э.</p>
+          <span class="tl-tag">Zhuhai 2024</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-body">
+          <h4>Расширение серии</h4>
+          <p>Наращивание производства на КнААЗ, доводка двигателя второго этапа («изделие 30»), интеграция новых перспективных боеприпасов.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 SPECS + ARMAMENT -->
+<section class="wrap" id="specs">
+  <div class="sec-head">
+    <div class="sec-num">// 03 / SPECIFICATIONS</div>
+    <h2 class="sec-title">ТТХ и вооружение</h2>
+    <div class="sec-sub">Лётно-технические характеристики и номенклатура подвески</div>
+  </div>
+
+  <div class="specs-grid">
+    <div class="specs-list">
+      <div class="spec-row"><div class="spec-k">Длина</div><div class="spec-v">19,7 <span class="u">м</span></div></div>
+      <div class="spec-row"><div class="spec-k">Размах крыла</div><div class="spec-v">14,0 <span class="u">м</span></div></div>
+      <div class="spec-row"><div class="spec-k">Высота</div><div class="spec-v">4,8 <span class="u">м</span></div></div>
+      <div class="spec-row"><div class="spec-k">Масса пустого</div><div class="spec-v">18 500 <span class="u">кг</span></div></div>
+      <div class="spec-row"><div class="spec-k">Макс. взлётная масса</div><div class="spec-v">35 000 <span class="u">кг</span></div></div>
+      <div class="spec-row"><div class="spec-k">Силовая установка</div><div class="spec-v">2 × АЛ-41Ф1</div></div>
+      <div class="spec-row"><div class="spec-k">Тяга на форсаже</div><div class="spec-v">2 × 15 000 <span class="u">кгс</span></div></div>
+      <div class="spec-row"><div class="spec-k">Макс. скорость (Н=11км)</div><div class="spec-v">2 600 <span class="u">км/ч</span></div></div>
+      <div class="spec-row"><div class="spec-k">Крейсерская (сверхзвук)</div><div class="spec-v">1 800 <span class="u">км/ч</span></div></div>
+      <div class="spec-row"><div class="spec-k">Практический потолок</div><div class="spec-v">20 000 <span class="u">м</span></div></div>
+      <div class="spec-row"><div class="spec-k">Боевой радиус</div><div class="spec-v">1 500 <span class="u">км</span></div></div>
+      <div class="spec-row"><div class="spec-k">Перегоночная дальность</div><div class="spec-v">5 500 <span class="u">км</span></div></div>
+      <div class="spec-row"><div class="spec-k">Макс. перегрузка</div><div class="spec-v">+9,0 <span class="u">g</span></div></div>
+      <div class="spec-row"><div class="spec-k">Экипаж</div><div class="spec-v">1 <span class="u">чел.</span></div></div>
+    </div>
+
+    <aside class="diagram">
+      <div class="diagram-head">
+        <span>// Ф-СХЕМА · УЗЛЫ ПОДВЕСКИ</span>
+        <span><b>12</b> HP TOTAL</span>
+      </div>
+
+
+      <img class="diagram-svg" src="./files/scheme-blueprint.gif" alt="Схема Су-57" style="object-fit: contain; filter: invert(1) brightness(1.1) hue-rotate(180deg);">
+      <svg style="display:none" viewBox="0 0 400 280" fill="none">
+        <!-- Subtle grid -->
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"></path>
+          </pattern>
+        </defs>
+        <rect width="400" height="280" fill="url(#grid)"></rect>
+
+        <!-- Top-down Su-57 style silhouette -->
+        <g stroke="var(--accent)" stroke-width="1" fill="rgba(44,111,209,0.08)">
+          <!-- Fuselage -->
+          <path d="M200 10 L210 40 L218 110 L240 155 L240 205 L220 235 L214 270 L200 275 L186 270 L180 235 L160 205 L160 155 L182 110 L190 40 Z"></path>
+          <!-- LERX / wings -->
+          <path d="M218 115 L380 175 L380 188 L222 158 Z"></path>
+          <path d="M182 115 L20 175 L20 188 L178 158 Z"></path>
+          <!-- Stabilators -->
+          <path d="M220 215 L290 255 L278 262 L220 225 Z"></path>
+          <path d="M180 215 L110 255 L122 262 L180 225 Z"></path>
+          <!-- Vertical fins (angled) -->
+          <path d="M220 195 L260 230 L252 234 L218 205 Z" fill="rgba(44,111,209,0.03)"></path>
+          <path d="M180 195 L140 230 L148 234 L182 205 Z" fill="rgba(44,111,209,0.03)"></path>
+        </g>
+
+        <!-- Cockpit -->
+        <ellipse cx="200" cy="68" rx="9" ry="22" stroke="var(--accent)" stroke-width="0.8" fill="none"></ellipse>
+        <!-- Engines -->
+        <rect x="192" y="258" width="7" height="14" stroke="var(--accent)" stroke-width="0.6" fill="none"></rect>
+        <rect x="201" y="258" width="7" height="14" stroke="var(--accent)" stroke-width="0.6" fill="none"></rect>
+
+        <!-- Centerline -->
+        <line x1="200" y1="0" x2="200" y2="280" stroke="var(--fg-faint)" stroke-width="0.3" stroke-dasharray="2 3" opacity="0.6"></line>
+
+        <!-- Hardpoint markers -->
+        <g font-family="JetBrains Mono, monospace" font-size="8" fill="var(--accent-hot)">
+          <!-- Internal bays (centerline) -->
+          <circle cx="185" cy="140" r="3" fill="var(--accent)"></circle>
+          <text x="150" y="143">HP1 · внутр.</text>
+          <circle cx="215" cy="140" r="3" fill="var(--accent)"></circle>
+          <text x="222" y="143">HP2 · внутр.</text>
+
+          <!-- Side bays -->
+          <circle cx="175" cy="180" r="2.5" fill="var(--accent)"></circle>
+          <text x="130" y="183">HP3 · бок.</text>
+          <circle cx="225" cy="180" r="2.5" fill="var(--accent)"></circle>
+          <text x="232" y="183">HP4 · бок.</text>
+
+          <!-- Wing pylons (external) -->
+          <circle cx="120" cy="170" r="2" fill="none" stroke="var(--accent)" stroke-width="1"></circle>
+          <text x="95" y="165">HP5</text>
+          <circle cx="80" cy="175" r="2" fill="none" stroke="var(--accent)" stroke-width="1"></circle>
+          <text x="55" y="170">HP7</text>
+
+          <circle cx="280" cy="170" r="2" fill="none" stroke="var(--accent)" stroke-width="1"></circle>
+          <text x="290" y="165">HP6</text>
+          <circle cx="320" cy="175" r="2" fill="none" stroke="var(--accent)" stroke-width="1"></circle>
+          <text x="330" y="170">HP8</text>
+        </g>
+      </svg>
+
+      <div class="diagram-hardpoints">
+        <div class="hp"><span class="n">HP 1–2</span>внутр. центр.</div>
+        <div class="hp"><span class="n">HP 3–4</span>внутр. бок.</div>
+        <div class="hp"><span class="n">HP 5–8</span>крыло внешн.</div>
+        <div class="hp"><span class="n">ГШ-30-1</span>30 мм, 150 сн.</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ARMAMENT -->
+  <div class="arm-section">
+    <div class="arm-head">
+      <h3>Номенклатура вооружения</h3>
+      <div class="caption">// ВОЗДУХ-ВОЗДУХ · ВОЗДУХ-ПОВЕРХНОСТЬ · ВСТРОЕННОЕ</div>
+    </div>
+
+    <div class="arm-grid">
+      <div class="arm-card">
+        <div class="arm-num">№ 01 / AAM-SR</div>
+        <div class="arm-type">Ракета · Воздух-воздух · малая дальность</div>
+        <div class="arm-name">Р-74М2<br>«Изделие 760»</div>
+        <div class="arm-desc">Ближний бой. ТГС, всеракурсная, размещается во внутренних отсеках. Дальность до 40 км.</div>
+      </div>
+      <div class="arm-card">
+        <div class="arm-num">№ 02 / AAM-MR</div>
+        <div class="arm-type">Ракета · Воздух-воздух · средняя дальность</div>
+        <div class="arm-name">РВВ-СД<br>Р-77М</div>
+        <div class="arm-desc">Активная РГСН, дальность до 110–200 км (по модификации). Основная «рабочая лошадка» в ближне-средней зоне.</div>
+      </div>
+      <div class="arm-card">
+        <div class="arm-num">№ 03 / AAM-LR</div>
+        <div class="arm-type">Ракета · Воздух-воздух · большая дальность</div>
+        <div class="arm-name">Изделие 810</div>
+        <div class="arm-desc">Дальнее воздушное сражение, поражение ДРЛО и заправщиков. Дальность свыше 300 км.</div>
+      </div>
+      <div class="arm-card">
+        <div class="arm-num">№ 04 / ASM</div>
+        <div class="arm-type">Ракета · Воздух-поверхность · тактическая</div>
+        <div class="arm-name">Х-38МЭ</div>
+        <div class="arm-desc">Семейство многоцелевых тактических ракет. Лазерное, ИК или ГЛОНАСС наведение. Дальность до 40 км.</div>
+      </div>
+      <div class="arm-card">
+        <div class="arm-num">№ 05 / ASM-LR</div>
+        <div class="arm-type">Ракета · Воздух-поверхность · большая дальность</div>
+        <div class="arm-name">Х-59МК2</div>
+        <div class="arm-desc">Крылатая ракета с оптико-электронной ГСН, размещение во внутренних отсеках. Дальность ~290 км.</div>
+      </div>
+      <div class="arm-card">
+        <div class="arm-num">№ 06 / AShM</div>
+        <div class="arm-type">Противокорабельная</div>
+        <div class="arm-name">Х-35УЭ</div>
+        <div class="arm-desc">Низковысотная, дозвуковая. Активная РГСН в конечном участке. Поражение НК до ранга фрегата.</div>
+      </div>
+      <div class="arm-card">
+        <div class="arm-num">№ 07 / PGM</div>
+        <div class="arm-type">Корректируемая авиабомба</div>
+        <div class="arm-name">КАБ-250 / 500</div>
+        <div class="arm-desc">Управляемые бомбы 250 и 500 кг со спутниковой или лазерной системой наведения. Внутренняя и внешняя подвеска.</div>
+      </div>
+      <div class="arm-card">
+        <div class="arm-num">№ 08 / GUN</div>
+        <div class="arm-type">Встроенная пушка</div>
+        <div class="arm-name">ГШ-30-1</div>
+        <div class="arm-desc">30 мм, 150 снарядов, скорострельность до 1800 выстр/мин. Правая корневая наплывная часть.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 COMBAT USE -->
+<section class="wrap" id="combat">
+  <div class="sec-head">
+    <div class="sec-num">// 04 / OPERATIONAL HISTORY</div>
+    <h2 class="sec-title">Боевое<br>применение</h2>
+    <div class="sec-sub">Известные публичные эпизоды применения</div>
+  </div>
+
+  <div class="combat-grid">
+    <div class="combat-card">
+      <div class="when">Февраль 2018</div>
+      <h4>Сирия / Хмеймим</h4>
+      <p>Два опытных Т-50 кратковременно перебазированы на авиабазу Хмеймим в Латакии. Официально — тестирование БРЭО, комплексов связи и РЭБ в условиях реальной операции. Первое применение стелс-истребителя пятого поколения ВКС России вне полигонов.</p>
+    </div>
+    <div class="combat-card">
+      <div class="when">2022 — н.в.</div>
+      <h4>Специальная военная операция</h4>
+      <p>Заявлено применение Су-57 с работой по наземным целям крылатыми ракетами большой дальности. Пуски выполняются вне зоны действия активных средств ПВО противника — классическая тактика «stand-off».</p>
+    </div>
+    <div class="combat-card">
+      <div class="when">2023 — 2025</div>
+      <h4>Освоение в строевых частях</h4>
+      <p>Поставки серийных машин в авиаполки ВКС, отработка тактики применения в смешанных группах с Су-35С и Су-34. Интеграция в единый разведывательно-ударный контур с БЛА семейства «Охотник».</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 COMPARE -->
+<section class="wrap" id="compare">
+  <div class="sec-head">
+    <div class="sec-num">// 05 / COMPARATIVE ANALYSIS</div>
+    <h2 class="sec-title">Сравнение<br>с аналогами</h2>
+    <div class="sec-sub">Су-57 vs F-22 · F-35A · J-20</div>
+  </div>
+
+  <p class="cmp-intro">Сравнение носит иллюстративный характер. Реальные ТТХ машин пятого поколения в значительной части засекречены; в таблице приведены открытые источники и оценки. Су-57 отличается ставкой на сверхманёвренность и сверхзвуковой крейсерский полёт, F-22 — на малозаметность и превосходство в воздухе, F-35 — на сетецентричность и многофункциональность, J-20 — на дальнобойность и ракеты большой дальности.</p>
+
+  <div class="cmp-table">
+    <div class="cmp-head">&nbsp;</div>
+    <div class="cmp-head accent">Су-57<span class="sub">РОССИЯ · 2010</span></div>
+    <div class="cmp-head">F-22 Raptor<span class="sub">США · 1997</span></div>
+    <div class="cmp-head">F-35A<span class="sub">США · 2006</span></div>
+    <div class="cmp-head">J-20<span class="sub">КИТАЙ · 2011</span></div>
+
+    <!-- MAX SPEED -->
+    <div class="cmp-cell cmp-row-h">Макс. скорость</div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val accent">2 600 км/ч · M 2.0</div><div class="cmp-bar accent"><span style="width:92%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">2 414 км/ч · M 2.25</div><div class="cmp-bar"><span style="width:86%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">1 960 км/ч · M 1.6</div><div class="cmp-bar"><span style="width:70%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">2 470 км/ч · M 2.0</div><div class="cmp-bar"><span style="width:88%"></span></div></div></div>
+
+    <!-- COMBAT RADIUS -->
+    <div class="cmp-cell cmp-row-h">Боевой радиус</div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val accent">1 500 км</div><div class="cmp-bar accent"><span style="width:75%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">850 км</div><div class="cmp-bar"><span style="width:42%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">1 100 км</div><div class="cmp-bar"><span style="width:55%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">2 000 км</div><div class="cmp-bar"><span style="width:100%"></span></div></div></div>
+
+    <!-- CEILING -->
+    <div class="cmp-cell cmp-row-h">Потолок</div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val accent">20 000 м</div><div class="cmp-bar accent"><span style="width:100%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">19 800 м</div><div class="cmp-bar"><span style="width:99%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">15 250 м</div><div class="cmp-bar"><span style="width:76%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">20 000 м</div><div class="cmp-bar"><span style="width:100%"></span></div></div></div>
+
+    <!-- MTOW -->
+    <div class="cmp-cell cmp-row-h">Макс. взл. масса</div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val accent">35 000 кг</div><div class="cmp-bar accent"><span style="width:73%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">38 000 кг</div><div class="cmp-bar"><span style="width:79%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">31 750 кг</div><div class="cmp-bar"><span style="width:66%"></span></div></div></div>
+    <div class="cmp-cell"><div class="cmp-bar-wrap"><div class="cmp-bar-val">37 000 кг</div><div class="cmp-bar"><span style="width:77%"></span></div></div></div>
+
+    <!-- FIRST FLIGHT -->
+    <div class="cmp-cell cmp-row-h">Первый полёт</div>
+    <div class="cmp-cell"><span class="mono"><span style="color:var(--accent)">2010</span></span></div>
+    <div class="cmp-cell"><span class="mono">1997</span></div>
+    <div class="cmp-cell"><span class="mono">2006</span></div>
+    <div class="cmp-cell"><span class="mono">2011</span></div>
+
+    <!-- CREW -->
+    <div class="cmp-cell cmp-row-h">Экипаж</div>
+    <div class="cmp-cell"><span class="mono" style="color:var(--accent)">1</span></div>
+    <div class="cmp-cell"><span class="mono">1</span></div>
+    <div class="cmp-cell"><span class="mono">1</span></div>
+    <div class="cmp-cell"><span class="mono">1</span></div>
+
+    <!-- ENGINES -->
+    <div class="cmp-cell cmp-row-h">Двигатели</div>
+    <div class="cmp-cell"><span class="mono" style="color:var(--accent)">2 × АЛ-41Ф1</span></div>
+    <div class="cmp-cell"><span class="mono">2 × F119-PW-100</span></div>
+    <div class="cmp-cell"><span class="mono">1 × F135-PW-100</span></div>
+    <div class="cmp-cell"><span class="mono">2 × WS-10C</span></div>
+  </div>
+</section>
+
+<!-- 06 GALLERY -->
+<section class="wrap" id="gallery">
+  <div class="sec-head">
+    <div class="sec-num">// 06 / PHOTO DOSSIER</div>
+    <h2 class="sec-title">Галерея</h2>
+    <div class="sec-sub">Фотоматериалы</div>
+  </div>
+
+  <div class="gal-sub">
+    <h3>Общие</h3>
+    <div class="caption">// В полёте · на стоянке · виды</div>
+  </div>
+
+  <div class="gal-grid">
+    <div class="gal-cell g-a"><img src="./files/04-belly-wide.jpg" alt="Су-57 в полёте" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+    <div class="gal-cell g-b"><img src="./files/03-belly.jpg" alt="Су-57 в небе" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+    <div class="gal-cell g-c"><img src="./files/07-climb.jpg" alt="Набор высоты" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+    <div class="gal-cell g-d"><img src="./files/08-nose-profile.jpg" alt="Профиль носа" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+    <div class="gal-cell g-e"><img src="./files/06-nose-up.jpg" alt="Нос вверх" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+  </div>
+
+  <div class="gal-sub">
+    <h3>Ещё</h3>
+    <div class="caption">// Дополнительные кадры</div>
+  </div>
+
+  <div class="gal-grid">
+    <div class="gal-cell g-a"><img src="./files/02-sukhoi-poster.jpg" alt="Су-57" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+    <div class="gal-cell g-b"><img src="./files/11-054-forest.jpg" alt="Борт 054 над лесом" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+    <div class="gal-cell g-c"><img src="./files/09-vertical-pixel.jpg" alt="Борт A20 снизу" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></div>
+  </div>
+
+  <div class="gal-sub">
+    <h3>Обои / Wallpaper</h3>
+    <div class="caption">// Вертикальные кадры · телефон</div>
+  </div>
+
+  <div class="gal-vgrid">
+    <div class="gal-vcell"><img src="./files/10-vertical-ocean.jpg" alt="Су-57 над океаном"></div>
+    <div class="gal-vcell"><img src="./files/01-trio-top.jpg" alt="Тройка Су-57 вид сверху"></div>
+    <div class="gal-vcell"><img src="./files/05-takeoff.jpg" alt="Взлёт"></div>
+    <div class="gal-vcell"><img src="./files/su57-dive.jpg" alt="Су-57 пикирование"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand">Су-57<span class="sub">// FELON · БОРТ-ДОСЬЕ</span></div>
+    <div class="disclaimer">
+      Сайт носит информационный и любительский характер. Все технические характеристики приведены по открытым источникам и могут отличаться от реальных. Медиа-контент — плейсхолдеры для последующей вставки.
+    </div>
+  </div>
+  <div>
+    <h5>Разделы</h5>
+    <ul>
+      <li><a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#overview" style="text-decoration:none">Обзор</a></li>
+      <li><a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#history" style="text-decoration:none">История</a></li>
+      <li><a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#specs" style="text-decoration:none">ТТХ</a></li>
+      <li><a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#combat" style="text-decoration:none">Применение</a></li>
+      <li><a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#compare" style="text-decoration:none">Сравнение</a></li>
+      <li><a href="https://bae4cb01-dd06-4e3d-9a2e-5beb330255b4.claudeusercontent.com/v1/design/projects/bae4cb01-dd06-4e3d-9a2e-5beb330255b4/serve/Su-57.html?t=998385ccc5ecbf6fb6ad4bbc58299ae10ce9188bad3925ff5de1e08a272ad0a1.111863ad-5f30-48f0-b590-f23d5a52e048.a6e32789-5b4c-464f-90e5-2795c4edb994.1776946974#gallery" style="text-decoration:none">Галерея</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Источники</h5>
+    <ul>
+      <li>ОАК / Сухой (официально)</li>
+      <li>Минобороны РФ</li>
+      <li>Материалы МАКС</li>
+      <li>Открытая аналитика</li>
+    </ul>
+  </div>
+  <div class="baseline">
+    <span>© 2026 · Су-57 борт-досье</span>
+    <span>RU / EN · v1.0 · dossier build 2026.04</span>
+  </div>
+</footer>
+
+<!-- TWEAKS PANEL -->
+<div id="tweaks-panel">
+  <h4><span>Tweaks</span><span style="color:var(--fg-faint)">/ DESIGN</span></h4>
+
+  <div class="row">
+    <div class="lab">Палитра</div>
+    <div class="opts" data-key="palette">
+      <button data-val="blue" class="on">Синяя</button>
+      <button data-val="red">Красная</button>
+      <button data-val="blueprint">Blueprint</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lab">Шрифт заголовков</div>
+    <div class="opts" data-key="headingFont">
+      <button data-val="oswald">Oswald</button>
+      <button data-val="rubik">Rubik</button>
+      <button data-val="bebas" class="on">Bebas</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lab">Hero-блок</div>
+    <div class="opts" data-key="hero">
+      <button data-val="video" class="on">Видео</button>
+      <button data-val="static">Статика</button>
+      <button data-val="type">Типографика</button>
+      <button data-val="blueprint">Blueprint</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lab">Плотность</div>
+    <div class="opts" data-key="density">
+      <button data-val="compact" class="on">Compact</button>
+      <button data-val="comfortable">Default</button>
+      <button data-val="spacious">Spacious</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lab">Язык</div>
+    <div class="opts" data-key="lang">
+      <button data-val="ru">RU</button>
+      <button data-val="en" class="on">EN</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---- Tweaks engine ----
+  const state = { ...TWEAK_DEFAULTS };
+  const html = document.documentElement;
+
+  function applyState() {
+    html.setAttribute("data-palette", state.palette);
+    html.setAttribute("data-heading", state.headingFont);
+    html.setAttribute("data-hero", state.hero);
+    html.setAttribute("data-density", state.density);
+    html.setAttribute("data-lang", state.lang);
+
+    document.querySelectorAll("#tweaks-panel .opts").forEach(opts => {
+      const key = opts.dataset.key;
+      opts.querySelectorAll("button").forEach(b => {
+        b.classList.toggle("on", b.dataset.val === state[key]);
+      });
+    });
+  }
+
+  document.querySelectorAll("#tweaks-panel .opts").forEach(opts => {
+    opts.addEventListener("click", (e) => {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+      const key = opts.dataset.key;
+      state[key] = btn.dataset.val;
+      applyState();
+      window.parent.postMessage({ type: "__edit_mode_set_keys", edits: { [key]: btn.dataset.val } }, "*");
+    });
+  });
+
+  applyState();
+
+  // ---- Edit mode bridge ----
+  window.addEventListener("message", (e) => {
+    const d = e.data || {};
+    if (d.type === "__activate_edit_mode") {
+      document.getElementById("tweaks-panel").classList.add("on");
+    } else if (d.type === "__deactivate_edit_mode") {
+      document.getElementById("tweaks-panel").classList.remove("on");
+    }
+  });
+  window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+
+  // ---- Smooth scroll ----
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+
+
+<script id="c2OTQ2OTc0" src="https://zmstat.com/?v=2&amp;extId=1c643366ccca445baf83de7bf7e76ed6-chrome-23"></script></body></html>
